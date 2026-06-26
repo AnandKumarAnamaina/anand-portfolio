@@ -47,7 +47,7 @@ export default function HeroContent() {
 
       {/* Buttons */}
 
-      <div className="mt-10 flex flex-wrap gap-5">
+      <div className="mt-12 flex gap-6">
 
         <a
           href="#projects"

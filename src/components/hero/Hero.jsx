@@ -25,32 +25,32 @@ export default function Hero() {
 
             <HeroImage />
 
-            <FloatingCard
+<FloatingCard
   title="Dashboards"
   value="50+"
   subtitle="Power BI"
-  className="top-10 -left-12"
+  className="top-16 -left-10"
 />
 
 <FloatingCard
   title="Projects"
   value="20+"
   subtitle="Completed"
-  className="top-8 -right-12"
+  className="top-8 -right-8"
 />
 
 <FloatingCard
   title="Experience"
   value="3+"
   subtitle="Years"
-  className="bottom-16 -left-10"
+  className="bottom-24 -left-6"
 />
 
 <FloatingCard
   title="Students"
   value="300+"
   subtitle="Trained"
-  className="bottom-8 -right-10"
+  className="bottom-12 -right-6"
 />
 
           </div>
