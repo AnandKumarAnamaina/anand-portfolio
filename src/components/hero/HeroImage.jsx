@@ -113,15 +113,20 @@ pointer-events-none
   <img
     src="/profile.png"
     alt="Anand Kumar"
-    className="
-      w-[430px]
-      lg:w-[500px]
-      object-contain
-      float
-      transition-all
-      duration-500
-      hover:scale-105
-    "
+className="
+  relative
+  z-20
+  w-[430px]
+  lg:w-[500px]
+  object-contain
+  mt-10
+  float
+  transition-all
+  duration-500
+  hover:scale-105
+  brightness-105
+  contrast-110
+"
   />
 </div>
 

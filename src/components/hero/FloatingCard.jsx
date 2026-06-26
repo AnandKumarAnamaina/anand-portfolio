@@ -10,7 +10,7 @@ export default function FloatingCard({
         absolute
         ${className}
         hidden lg:block
-        bg-white/80
+        bg-white/80 backdrop-blur-xl
         backdrop-blur-2xl
         border
         border-white/70

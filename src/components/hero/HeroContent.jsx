@@ -40,7 +40,7 @@ export default function HeroContent() {
 
       {/* Description */}
 
-      <p className="mt-8 max-w-xl text-lg leading-9 text-slate-600">
+      <p className="mt-8 max-w-lg text-lg leading-9 text-slate-600">
         I build interactive dashboards and data solutions that help businesses
         make smarter decisions and drive growth.
       </p>
@@ -60,27 +60,11 @@ export default function HeroContent() {
         </a>
 
         <a
-          href="#contact"
-          className="
-group
-px-8
-py-4
-rounded-2xl
-bg-gradient-to-r
-from-blue-600
-to-purple-600
-text-white
-font-semibold
-shadow-xl
-hover:shadow-purple-300
-hover:-translate-y-1
-transition-all
-duration-300
-"
-        >
-          Contact Me
-        </a>
-
+  href="#contact"
+  className="px-8 py-4 rounded-2xl border border-slate-300 bg-white font-semibold hover:bg-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+>
+  Contact Me
+</a>
       </div>
 
     </div>
