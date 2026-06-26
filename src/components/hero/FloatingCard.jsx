@@ -9,24 +9,33 @@ export default function FloatingCard({
       className={`
         absolute
         ${className}
-        bg-white
-        rounded-3xl
-        shadow-2xl
-        px-6
-        py-5
-        min-w-[180px]
+        hidden lg:block
+        bg-white/80
+        backdrop-blur-2xl
         border
-        border-slate-100
+        border-white/70
+        rounded-[28px]
+        shadow-[0_25px_60px_rgba(0,0,0,0.08)]
+        px-7
+        py-6
+        min-w-[190px]
+        transition-all
+        duration-500
+        hover:-translate-y-3
+        hover:scale-105
+        hover:shadow-[0_35px_70px_rgba(37,99,235,0.18)]
         z-30
       `}
     >
-      <p className="text-sm text-slate-500">{title}</p>
+      <div className="text-xs uppercase tracking-[0.25em] text-slate-400">
+        {title}
+      </div>
 
-      <h3 className="text-4xl font-bold mt-1 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <h3 className="mt-3 text-5xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
         {value}
       </h3>
 
-      <p className="text-slate-600 text-sm mt-1">
+      <p className="mt-2 text-sm text-slate-500">
         {subtitle}
       </p>
     </div>
