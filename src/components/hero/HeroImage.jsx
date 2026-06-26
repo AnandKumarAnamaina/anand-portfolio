@@ -102,7 +102,7 @@ pointer-events-none
     relative
     z-20
     rounded-[36px]
-    bg-white/40
+    border-white/20
     backdrop-blur-xl
     border
     border-white/60
@@ -123,7 +123,7 @@ className="
   float
   transition-all
   duration-500
-  hover:scale-105
+  hover:scale-[1.03]
   brightness-105
   contrast-110
 "
