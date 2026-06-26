@@ -15,7 +15,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-8">
 
-        <div className="grid lg:grid-cols-2 items-center gap-12">
+        <div className="grid lg:grid-cols-2 items-center gap-4 xl:gap-8">
 
           {/* Left Side */}
           <HeroContent />
@@ -29,28 +29,28 @@ export default function Hero() {
   title="Dashboards"
   value="50+"
   subtitle="Power BI"
-  className="top-16 -left-10"
+  className="top-20 -left-10"
 />
 
 <FloatingCard
   title="Projects"
   value="20+"
   subtitle="Completed"
-  className="top-8 -right-8"
+  className="top-12 -right-8"
 />
 
 <FloatingCard
   title="Experience"
   value="3+"
   subtitle="Years"
-  className="bottom-24 -left-6"
+  className="bottom-20 -left-8"
 />
 
 <FloatingCard
   title="Students"
   value="300+"
   subtitle="Trained"
-  className="bottom-12 -right-6"
+  className="bottom-10 -right-8"
 />
 
           </div>

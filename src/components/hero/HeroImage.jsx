@@ -105,7 +105,7 @@ pointer-events-none
           w-[450px]
           lg:w-[540px]
           object-contain
-          mt-16
+          mt-8
           float
           transition-all
           duration-500

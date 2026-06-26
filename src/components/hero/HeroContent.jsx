@@ -4,7 +4,7 @@ export default function HeroContent() {
 
       {/* Badge */}
 
-      <div className="inline-flex items-center gap-2 rounded-full bg-purple-100 px-5 py-2">
+      <div className="inline-flex items-center gap-2 rounded-full bg-purple-100 px-6 py-3">
         <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
 
         <span className="text-purple-700 font-medium">
