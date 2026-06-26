@@ -57,21 +57,19 @@ export default function HeroImage() {
       ></div>
 
       {/* Profile Image */}
-      <img
-        src="/profile.png"
-        alt="Anand Kumar"
-        className="
-          relative
-          z-20
-          w-[440px]
-          lg:w-[560px]
-          object-contain
-          drop-shadow-[0_30px_70px_rgba(0,0,0,0.18)]
-          transition-all
-          duration-500
-          hover:scale-105
-        "
-      />
+    <img
+  src="/profile.png"
+  alt="Anand Kumar"
+  className="
+    w-[430px]
+    lg:w-[520px]
+    object-contain
+    relative
+    z-20
+    mt-10
+    float
+  "
+/>
 
     </div>
   );
