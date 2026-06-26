@@ -21,7 +21,7 @@ export default function Hero() {
           <HeroContent />
 
           {/* Right Side */}
-          <div className="relative flex justify-center items-center min-h-[650px]">
+          <div className="relative flex justify-center lg:justify-end">
 
             <HeroImage />
 
