@@ -36,7 +36,7 @@ export default function Hero() {
   title="Projects"
   value="20+"
   subtitle="Completed"
-  className="top-12 -right-8"
+  className="top-20 -right-15"
 />
 
 <FloatingCard
