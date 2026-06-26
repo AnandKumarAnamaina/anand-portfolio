@@ -20,8 +20,9 @@ export default function FloatingCard({
         py-6
         min-w-[190px]
         transition-all
-        duration-500
+        duration-300
         hover:-translate-y-3
+        hover:rotate-1
         hover:scale-105
         hover:shadow-[0_35px_70px_rgba(37,99,235,0.18)]
         z-30

@@ -96,22 +96,34 @@ pointer-events-none
       />
 
       {/* Profile Image */}
-      <img
-        src="/profile.png"
-        alt="Anand Kumar"
-        className="
-          relative
-          z-20
-          w-[450px]
-          lg:w-[540px]
-          object-contain
-          mt-8
-          float
-          transition-all
-          duration-500
-          hover:scale-105
-        "
-      />
+{/* Glass Card */}
+<div
+  className="
+    relative
+    z-20
+    rounded-[36px]
+    bg-white/40
+    backdrop-blur-xl
+    border
+    border-white/60
+    shadow-[0_30px_60px_rgba(0,0,0,0.12)]
+    p-6
+  "
+>
+  <img
+    src="/profile.png"
+    alt="Anand Kumar"
+    className="
+      w-[430px]
+      lg:w-[500px]
+      object-contain
+      float
+      transition-all
+      duration-500
+      hover:scale-105
+    "
+  />
+</div>
 
     </div>
   );

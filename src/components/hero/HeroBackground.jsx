@@ -6,15 +6,15 @@ export default function HeroBackground() {
       <div
         className="
           absolute
-          -top-32
-          -left-32
-          w-[500px]
-          h-[500px]
+          -top-40
+          -left-40
+          w-[520px]
+          h-[520px]
           rounded-full
-          bg-blue-200/40
-          blur-[140px]
+          bg-blue-200/35
+          blur-[160px]
         "
-      ></div>
+      />
 
       {/* Purple Glow */}
       <div
@@ -22,13 +22,13 @@ export default function HeroBackground() {
           absolute
           top-0
           right-0
-          w-[550px]
-          h-[550px]
+          w-[580px]
+          h-[580px]
           rounded-full
-          bg-purple-200/40
-          blur-[160px]
+          bg-purple-200/35
+          blur-[170px]
         "
-      ></div>
+      />
 
       {/* Pink Glow */}
       <div
@@ -36,42 +36,67 @@ export default function HeroBackground() {
           absolute
           bottom-0
           left-1/3
-          w-[450px]
-          h-[450px]
+          w-[480px]
+          h-[480px]
           rounded-full
-          bg-pink-200/30
-          blur-[140px]
+          bg-pink-200/25
+          blur-[160px]
         "
-      ></div>
+      />
 
-      {/* Decorative Circle */}
+      {/* Large Circle */}
       <div
         className="
           absolute
-          top-28
-          right-32
-          w-40
-          h-40
-          border
-          border-blue-100
+          top-20
+          right-28
+          w-44
+          h-44
           rounded-full
+          border
+          border-blue-100/70
         "
-      ></div>
+      />
 
-      {/* Small Decorative Circle */}
+      {/* Medium Circle */}
       <div
         className="
           absolute
           bottom-32
           left-24
-          w-20
-          h-20
-          border
-          border-purple-100
+          w-24
+          h-24
           rounded-full
+          border
+          border-purple-100/70
         "
-      ></div>
+      />
 
+      {/* Tiny Dot */}
+      <div
+        className="
+          absolute
+          top-44
+          left-1/2
+          w-3
+          h-3
+          rounded-full
+          bg-purple-400
+        "
+      />
+
+      {/* Tiny Dot */}
+      <div
+        className="
+          absolute
+          bottom-24
+          right-1/4
+          w-2.5
+          h-2.5
+          rounded-full
+          bg-blue-500
+        "
+      />
     </div>
   );
 }

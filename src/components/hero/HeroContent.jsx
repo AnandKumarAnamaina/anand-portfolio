@@ -53,12 +53,30 @@ export default function HeroContent() {
           href="#projects"
           className="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-lg hover:scale-105 transition"
         >
-          View My Work →
+         View My Work
+<span className="ml-2 group-hover:translate-x-1 transition">
+  →
+</span>
         </a>
 
         <a
           href="#contact"
-          className="px-8 py-4 rounded-2xl border border-slate-300 bg-white text-slate-700 font-semibold hover:bg-slate-50 transition"
+          className="
+group
+px-8
+py-4
+rounded-2xl
+bg-gradient-to-r
+from-blue-600
+to-purple-600
+text-white
+font-semibold
+shadow-xl
+hover:shadow-purple-300
+hover:-translate-y-1
+transition-all
+duration-300
+"
         >
           Contact Me
         </a>
