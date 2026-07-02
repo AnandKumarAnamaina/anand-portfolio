@@ -4,17 +4,15 @@ export default function AboutImage() {
 
       <div
         className="
-          relative
-          w-[380px]
-          rounded-[36px]
+          w-[390px]
+          rounded-[34px]
           overflow-hidden
           bg-white
-          border
-          border-slate-200
-          shadow-[0_30px_70px_rgba(0,0,0,0.08)]
-          hover:-translate-y-2
+          shadow-2xl
+          border border-slate-100
           transition-all
           duration-500
+          hover:-translate-y-2
         "
       >
 
@@ -24,15 +22,15 @@ export default function AboutImage() {
 
         {/* Image */}
 
-        <div className="p-8 pb-2">
+        <div className="p-6 pb-2">
 
           <img
-            src="/profile.png"
+            src="/about-profile.png"
             alt="Anand Kumar"
             className="
-              w-[250px]
-              mx-auto
-              object-contain
+              w-full
+              rounded-3xl
+              object-cover
             "
           />
 
@@ -40,13 +38,13 @@ export default function AboutImage() {
 
         {/* Name */}
 
-        <div className="px-8 text-center">
+        <div className="text-center px-6">
 
-          <h3 className="text-2xl font-bold text-slate-900">
+          <h2 className="text-4xl font-bold text-slate-900">
             Anand Kumar
-          </h3>
+          </h2>
 
-          <p className="text-blue-600 font-medium mt-1">
+          <p className="mt-2 text-blue-600 font-medium">
             Power BI Developer
           </p>
 
@@ -58,7 +56,7 @@ export default function AboutImage() {
 
         {/* Skills */}
 
-        <div className="px-8 space-y-4">
+        <div className="px-8 space-y-5">
 
           <div>📊 Power BI</div>
 
@@ -72,9 +70,9 @@ export default function AboutImage() {
 
         {/* Experience */}
 
-        <div className="mt-8 rounded-t-[30px] bg-slate-50 p-8 text-center">
+        <div className="mt-8 bg-slate-50 p-8 text-center">
 
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             3+
           </h2>
 
