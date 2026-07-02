@@ -1,3 +1,9 @@
+import {
+  BarChart3,
+  Database,
+  GraduationCap,
+  Code2,
+} from "lucide-react";
 export default function AboutImage() {
   return (
     <div className="flex justify-center">
