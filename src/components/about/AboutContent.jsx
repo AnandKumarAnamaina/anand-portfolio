@@ -117,7 +117,7 @@ export default function AboutContent() {
         className="
           inline-block
           mt-10
-          px-8
+          px-10
           py-4
           rounded-2xl
           bg-gradient-to-r

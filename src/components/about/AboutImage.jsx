@@ -30,7 +30,7 @@ export default function AboutImage() {
             alt="Anand Kumar"
             className="
               w-full
-              h-[420px]
+              h-[460px]
               object-cover
               rounded-3xl
             "
@@ -58,7 +58,7 @@ export default function AboutImage() {
 
         {/* Skills */}
 
-        <div className="px-8 space-y-4">
+        <div className="px-6 py-3 space-y-4">
 
   <div className="flex items-center gap-3">
     <BarChart3 size={18} className="text-blue-600" />
