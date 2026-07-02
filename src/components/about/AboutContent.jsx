@@ -23,7 +23,7 @@ export default function AboutContent() {
 
       {/* Heading */}
 
-      <h2 className="mt-6 text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
+      <h2 className="max-w-2xl text-5xl lg:text-6xl font-bold leading-tight">
 
         Turning Data Into
 
@@ -86,7 +86,7 @@ export default function AboutContent() {
 
       {/* Statistics */}
 
-      <div className="grid grid-cols-2 gap-6 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
 
         <div className="rounded-3xl bg-white p-6 shadow-lg border border-slate-100">
           <h3 className="text-5xl font-bold text-blue-600">300+</h3>

@@ -4,7 +4,7 @@ export default function AboutImage() {
 
       <div
         className="
-          w-[420px]
+          max-w-[360px] w-full
           rounded-[34px]
           overflow-hidden
           bg-white

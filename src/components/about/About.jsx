@@ -13,7 +13,7 @@ export default function About() {
 
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200 rounded-full blur-[150px] opacity-30"></div>
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-screen-xl mx-auto grid lg:grid-cols-[420px_1fr] gap-24 items-center">
 
         <AboutImage />
 
