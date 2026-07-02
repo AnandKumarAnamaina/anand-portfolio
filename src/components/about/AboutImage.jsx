@@ -36,7 +36,7 @@ export default function AboutImage() {
             alt="Anand Kumar"
             className="
               w-full
-              h-[460px]
+              h-[400px]
               object-cover
               rounded-3xl
             "
@@ -90,9 +90,9 @@ export default function AboutImage() {
 
         {/* Experience */}
 
-        <div className="mt-6 bg-slate-50 py-6 text-center">
+        <div className="mt-6 bg-slate-50 py-4 text-center">
 
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             3+
           </h2>
 
