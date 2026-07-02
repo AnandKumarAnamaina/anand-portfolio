@@ -4,7 +4,7 @@ export default function AboutImage() {
 
       <div
         className="
-          max-w-[360px] w-full
+          max-w-[330px] w-full
           rounded-[34px]
           overflow-hidden
           bg-white
@@ -13,6 +13,7 @@ export default function AboutImage() {
           transition-all
           duration-500
           hover:-translate-y-2
+          hover:shadow-2xl
         "
       >
 
@@ -22,15 +23,16 @@ export default function AboutImage() {
 
         {/* Image */}
 
-        <div className="p-6 pb-2">
+        <div className="p-5 pb-3">
 
           <img
             src="/about-profile.png"
             alt="Anand Kumar"
             className="
               w-full
-              rounded-3xl
+              h-[420px]
               object-cover
+              rounded-3xl
             "
           />
 
@@ -40,7 +42,7 @@ export default function AboutImage() {
 
         <div className="text-center px-6">
 
-          <h2 className="text-4xl font-bold text-slate-900">
+          <h2 className="text-3xl font-bold text-slate-900">
             Anand Kumar
           </h2>
 
@@ -56,23 +58,35 @@ export default function AboutImage() {
 
         {/* Skills */}
 
-        <div className="px-8 space-y-5">
+        <div className="px-8 space-y-4">
 
-          <div>📊 Power BI</div>
+  <div className="flex items-center gap-3">
+    <BarChart3 size={18} className="text-blue-600" />
+    <span>Power BI</span>
+  </div>
 
-          <div>📈 Data Analytics</div>
+  <div className="flex items-center gap-3">
+    <Database size={18} className="text-purple-600" />
+    <span>Data Analytics</span>
+  </div>
 
-          <div>🎓 Technical Trainer</div>
+  <div className="flex items-center gap-3">
+    <GraduationCap size={18} className="text-blue-600" />
+    <span>Technical Trainer</span>
+  </div>
 
-          <div>💻 React Developer</div>
+  <div className="flex items-center gap-3">
+    <Code2 size={18} className="text-purple-600" />
+    <span>React Developer</span>
+  </div>
 
-        </div>
+</div>
 
         {/* Experience */}
 
-        <div className="mt-8 bg-slate-50 p-8 text-center">
+        <div className="mt-6 bg-slate-50 py-6 text-center">
 
-          <h2 className="text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             3+
           </h2>
 
