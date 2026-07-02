@@ -1,65 +1,122 @@
-import StatCard from "./StatCard";
-
 export default function AboutContent() {
   return (
     <div>
 
-      <span className="px-5 py-2 bg-purple-100 text-purple-700 rounded-full font-medium">
-        About Me
+      {/* Section Badge */}
+
+      <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-purple-100 text-purple-700 font-medium">
+
+        👤 Who I Am
+
       </span>
 
-      <h2 className="mt-6 text-5xl font-bold text-slate-900">
+      {/* Heading */}
+
+      <h2 className="mt-6 text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
+
         Turning Data Into
+
         <br />
 
-        <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent">
+
           Business Growth
+
         </span>
 
       </h2>
 
-      <p className="mt-8 text-lg text-slate-600 leading-9">
+      {/* Short Description */}
 
-        I'm Anand Kumar Anamaina, a passionate Power BI Developer,
-        Data Analyst and Technical Trainer with expertise in Business Intelligence,
-        Dashboard Development, Data Visualization and Analytics.
+      <p className="mt-8 text-lg leading-9 text-slate-600 max-w-2xl">
 
-        I enjoy transforming raw data into meaningful dashboards that help
-        organizations make smarter business decisions.
+        I help businesses transform complex data into interactive dashboards
+        using Power BI, SQL, and analytics. My passion is turning raw data
+        into meaningful insights that support smarter business decisions while
+        mentoring future professionals.
 
       </p>
 
-      <div className="grid grid-cols-2 gap-6 mt-10">
+      {/* Skill Chips */}
 
-        <StatCard
-          number="3+"
-          title="Years Experience"
-          color="text-blue-600"
-        />
+      <div className="mt-10 flex flex-wrap gap-4">
 
-        <StatCard
-          number="300+"
-          title="Students Trained"
-          color="text-purple-600"
-        />
+        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
+          📊 Power BI
+        </span>
 
-        <StatCard
-          number="15+"
-          title="Projects"
-          color="text-blue-600"
-        />
+        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
+          🗄 SQL
+        </span>
 
-        <StatCard
-          number="50+"
-          title="Dashboards"
-          color="text-purple-600"
-        />
+        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
+          📈 Data Analytics
+        </span>
+
+        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
+          📉 Dashboarding
+        </span>
+
+        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
+          ⚡ DAX
+        </span>
+
+        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
+          🎓 Trainer
+        </span>
 
       </div>
 
-      <button className="mt-10 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-xl hover:scale-105 transition">
-        Download Resume
-      </button>
+      {/* Statistics */}
+
+      <div className="grid grid-cols-2 gap-6 mt-12">
+
+        <div className="rounded-3xl bg-white p-6 shadow-lg border border-slate-100">
+          <h3 className="text-5xl font-bold text-blue-600">300+</h3>
+          <p className="mt-2 text-slate-500">Students Trained</p>
+        </div>
+
+        <div className="rounded-3xl bg-white p-6 shadow-lg border border-slate-100">
+          <h3 className="text-5xl font-bold text-purple-600">50+</h3>
+          <p className="mt-2 text-slate-500">Dashboards Built</p>
+        </div>
+
+        <div className="rounded-3xl bg-white p-6 shadow-lg border border-slate-100">
+          <h3 className="text-5xl font-bold text-blue-600">20+</h3>
+          <p className="mt-2 text-slate-500">Projects Delivered</p>
+        </div>
+
+        <div className="rounded-3xl bg-white p-6 shadow-lg border border-slate-100">
+          <h3 className="text-5xl font-bold text-purple-600">3+</h3>
+          <p className="mt-2 text-slate-500">Years Experience</p>
+        </div>
+
+      </div>
+
+      {/* Button */}
+
+      <a
+        href="/Anand_Kumar_CV.pdf"
+        className="
+          inline-block
+          mt-10
+          px-8
+          py-4
+          rounded-2xl
+          bg-gradient-to-r
+          from-blue-600
+          to-purple-600
+          text-white
+          font-semibold
+          shadow-xl
+          hover:shadow-purple-300
+          hover:-translate-y-1
+          transition-all
+          duration-300
+        "
+      >
+        Download CV
+      </a>
 
     </div>
   );
