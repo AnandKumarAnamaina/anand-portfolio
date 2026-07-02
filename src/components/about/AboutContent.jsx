@@ -1,3 +1,13 @@
+import {
+  User,
+  BarChart3,
+  Database,
+  GraduationCap,
+  Briefcase,
+  Download,
+  BrainCircuit,
+  LayoutDashboard,
+} from "lucide-react";
 export default function AboutContent() {
   return (
     <div>
@@ -5,6 +15,7 @@ export default function AboutContent() {
       {/* Section Badge */}
 
       <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-purple-100 text-purple-700 font-medium">
+         <User size={18} />
 
         👤 Who I Am
 
@@ -41,31 +52,37 @@ export default function AboutContent() {
 
       <div className="mt-10 flex flex-wrap gap-4">
 
-        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
-          📊 Power BI
-        </span>
+  <div className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-lg transition">
+    <BarChart3 size={18} className="text-blue-600" />
+    <span>Power BI</span>
+  </div>
 
-        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
-          🗄 SQL
-        </span>
+  <div className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-lg transition">
+    <Database size={18} className="text-blue-600" />
+    <span>SQL</span>
+  </div>
 
-        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
-          📈 Data Analytics
-        </span>
+  <div className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-lg transition">
+    <BrainCircuit size={18} className="text-purple-600" />
+    <span>DAX</span>
+  </div>
 
-        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
-          📉 Dashboarding
-        </span>
+  <div className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-lg transition">
+    <LayoutDashboard size={18} className="text-blue-600" />
+    <span>Dashboarding</span>
+  </div>
 
-        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
-          ⚡ DAX
-        </span>
+  <div className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-lg transition">
+    <GraduationCap size={18} className="text-purple-600" />
+    <span>Trainer</span>
+  </div>
 
-        <span className="px-5 py-3 rounded-2xl border border-slate-200 bg-white shadow-sm hover:shadow-md transition">
-          🎓 Trainer
-        </span>
+  <div className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-lg transition">
+    <Briefcase size={18} className="text-blue-600" />
+    <span>Business Intelligence</span>
+  </div>
 
-      </div>
+</div>
 
       {/* Statistics */}
 

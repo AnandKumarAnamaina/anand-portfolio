@@ -4,11 +4,11 @@ export default function AboutImage() {
 
       <div
         className="
-          w-[390px]
+          w-[420px]
           rounded-[34px]
           overflow-hidden
           bg-white
-          shadow-2xl
+          shadow-xl
           border border-slate-100
           transition-all
           duration-500
