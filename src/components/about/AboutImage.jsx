@@ -1,48 +1,88 @@
 export default function AboutImage() {
   return (
-    <div className="relative flex justify-center">
+    <div className="flex justify-center">
 
-      {/* Background Glow */}
-      <div className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 blur-[120px] opacity-40"></div>
+      <div
+        className="
+          relative
+          w-[380px]
+          rounded-[36px]
+          overflow-hidden
+          bg-white
+          border
+          border-slate-200
+          shadow-[0_30px_70px_rgba(0,0,0,0.08)]
+          hover:-translate-y-2
+          transition-all
+          duration-500
+        "
+      >
 
-      {/* Gradient Border */}
-      <div className="relative p-[2px] rounded-[30px] bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 shadow-2xl">
+        {/* Gradient Top */}
 
-        <div className="bg-white rounded-[32px] p-2">
+        <div className="h-2 bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600"></div>
+
+        {/* Image */}
+
+        <div className="p-8 pb-2">
 
           <img
             src="/profile.png"
             alt="Anand Kumar"
-            className="w-[250px] lg:w-[280px] mx-auto object-contain transition duration-500 hover:scale-105"
+            className="
+              w-[250px]
+              mx-auto
+              object-contain
+            "
           />
 
         </div>
 
-      </div>
+        {/* Name */}
 
-      {/* Floating Badge 1 */}
-      <div className="absolute -top-6 -left-6 bg-white shadow-xl rounded-3xl px-6 py-4">
+        <div className="px-8 text-center">
 
-        <h3 className="text-3xl font-bold text-blue-600">
-          3+
-        </h3>
+          <h3 className="text-2xl font-bold text-slate-900">
+            Anand Kumar
+          </h3>
 
-        <p className="text-gray-500 text-sm">
-          Years Experience
-        </p>
+          <p className="text-blue-600 font-medium mt-1">
+            Power BI Developer
+          </p>
 
-      </div>
+        </div>
 
-      {/* Floating Badge 2 */}
-      <div className="absolute bottom-6 -right-6 bg-white shadow-xl rounded-3xl px-6 py-4">
+        {/* Divider */}
 
-        <h3 className="text-3xl font-bold text-purple-600">
-          50+
-        </h3>
+        <div className="my-6 border-t border-slate-200"></div>
 
-        <p className="text-gray-500 text-sm">
-          Dashboards
-        </p>
+        {/* Skills */}
+
+        <div className="px-8 space-y-4">
+
+          <div>📊 Power BI</div>
+
+          <div>📈 Data Analytics</div>
+
+          <div>🎓 Technical Trainer</div>
+
+          <div>💻 React Developer</div>
+
+        </div>
+
+        {/* Experience */}
+
+        <div className="mt-8 rounded-t-[30px] bg-slate-50 p-8 text-center">
+
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            3+
+          </h2>
+
+          <p className="mt-2 text-slate-500">
+            Years Experience
+          </p>
+
+        </div>
 
       </div>
 
