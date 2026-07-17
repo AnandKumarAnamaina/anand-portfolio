@@ -1,54 +1,62 @@
 import {
   BarChart3,
-  Database,
   FileSpreadsheet,
+  Database,
   BrainCircuit,
   Code2,
   Server,
-  Layers3,
-  MonitorSmartphone,
+  Globe,
+  Palette,
 } from "lucide-react";
 
 const skills = [
   {
     icon: BarChart3,
-    title: "Power BI",
-    description: "Interactive Dashboards, DAX, Power Query, Data Modeling",
+    title: "Business Intelligence",
+    description:
+      "Power BI, DAX, Power Query, Data Modeling, Dashboard Development",
   },
   {
     icon: FileSpreadsheet,
-    title: "Excel",
-    description: "Advanced Excel, Pivot Tables, Charts, Power Query",
-  },
-  {
-    icon: Database,
-    title: "SQL",
-    description: "MySQL, SQL Server, Oracle Database",
-  },
-  {
-    icon: BrainCircuit,
-    title: "Data Analytics",
-    description: "Data Cleaning, Reporting, Business Intelligence",
+    title: "Microsoft Office",
+    description:
+      "Advanced Excel, Microsoft Word, Microsoft PowerPoint",
   },
   {
     icon: Code2,
     title: "Programming",
-    description: "Python, Java, JavaScript",
+    description:
+      "Python (Basic), SQL (Basic)",
+  },
+  {
+    icon: Database,
+    title: "Database",
+    description:
+      "MySQL, Oracle Database",
   },
   {
     icon: Server,
     title: "Big Data",
-    description: "Hadoop, Hive, Pig, Spark",
+    description:
+      "Hadoop, Hive, Pig, MapReduce",
   },
   {
-    icon: Layers3,
-    title: "Tools",
-    description: "Git, GitHub, VS Code, Canva",
+    icon: Globe,
+    title: "Web Fundamentals",
+    description:
+      "HTML (Basic), CSS (Basic)",
   },
   {
-    icon: MonitorSmartphone,
-    title: "Web",
-    description: "React, Tailwind CSS, HTML, CSS",
+    icon: Palette,
+    title: "Design & Productivity",
+    description:
+      "Canva, VS Code, GitHub, Google Workspace",
+  },
+  {
+    icon: BrainCircuit,
+    title: "Data Analytics",
+    description:
+      "Data Cleaning, Reporting, Data Visualization, Business Insights",
   },
 ];
 
@@ -56,15 +64,15 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative min-h-screen py-24 bg-slate-50 overflow-hidden"
+      className="relative min-h-screen bg-slate-50 py-24 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-8">
 
-        {/* Heading */}
+        {/* Section Heading */}
         <div className="text-center mb-16">
 
-          <span className="inline-flex items-center rounded-full bg-blue-100 px-5 py-2 text-blue-700 font-semibold">
-            My Expertise
+          <span className="inline-flex items-center rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold text-blue-700">
+            Technical Skills
           </span>
 
           <h2 className="mt-6 text-5xl font-bold text-slate-900">
@@ -74,15 +82,16 @@ export default function Skills() {
             </span>
           </h2>
 
-          <p className="mt-5 max-w-2xl mx-auto text-lg text-slate-600 leading-8">
-            My technical expertise spans Business Intelligence, Data Analytics,
-            Programming, Big Data technologies, and modern Web Development.
+          <p className="mt-5 max-w-3xl mx-auto text-lg leading-8 text-slate-600">
+            My technical skills focus on Business Intelligence, Data Analytics,
+            Big Data technologies, and software tools that I use for dashboard
+            development, data analysis, and technical training.
           </p>
 
         </div>
 
         {/* Skills Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
           {skills.map((skill) => {
             const Icon = skill.icon;
@@ -93,16 +102,16 @@ export default function Skills() {
                 className="
                   group
                   rounded-3xl
-                  bg-white
-                  p-8
                   border
                   border-slate-200
+                  bg-white
+                  p-8
                   shadow-sm
                   transition-all
                   duration-300
-                  hover:-translate-y-3
-                  hover:shadow-2xl
+                  hover:-translate-y-2
                   hover:border-blue-200
+                  hover:shadow-xl
                 "
               >
                 <div
@@ -117,9 +126,9 @@ export default function Skills() {
                     from-blue-600
                     to-purple-600
                     text-white
-                    shadow-lg
+                    transition-transform
+                    duration-300
                     group-hover:scale-110
-                    transition
                   "
                 >
                   <Icon size={30} />
