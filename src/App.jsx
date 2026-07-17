@@ -4,6 +4,9 @@ import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
 import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Projects";
+import Certifications from "./components/certifications/Certifications";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/layout/Footer";
 
 export default function App() {
   return (
@@ -14,6 +17,9 @@ export default function App() {
       <Skills />
       <Experience />
       <Projects />
+      <Certifications />
+      <Contact />
+      <Footer />
     </>
   );
 }
