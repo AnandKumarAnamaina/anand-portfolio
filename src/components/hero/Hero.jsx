@@ -9,7 +9,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-white pt-24 pb-2"
+      className="relative
+overflow-hidden
+bg-white
+min-h-screen
+flex
+items-center
+pt-24"
     >
       <HeroBackground />
 
