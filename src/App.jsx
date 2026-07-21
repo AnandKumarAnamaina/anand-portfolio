@@ -6,6 +6,7 @@ import Skills from "./components/skills/Skills";
 import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Projects";
 import Testimonials from "./components/testimonials/Testimonials";
+import VideoTestimonials from "./components/videoTestimonials/VideoTestimonials";
 import Certifications from "./components/certifications/Certifications";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/layout/Footer";
@@ -21,6 +22,7 @@ export default function App() {
       <Experience />
       <Projects />
       <Testimonials />
+      <VideoTestimonials />
       <Certifications />
       <Contact />
       <Footer />

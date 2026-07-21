@@ -1,146 +1,115 @@
-const projects = [
-  {
-    title: "Food Delivery Analytics Dashboard",
-    category: "Power BI",
-    icon: "📊",
-    description:
-      "Interactive Power BI dashboard analyzing restaurant performance, customer behavior, revenue, delivery efficiency and KPIs.",
-    tech: ["Power BI", "DAX", "Power Query"],
-    github:
-      "https://github.com/AnandKumarAnamaina/FOOD-DELIVERY-ANALYTICS-DASHBOARD-Power-BI-Project",
-  },
-  {
-    title: "Sales Performance Dashboard",
-    category: "Power BI",
-    icon: "📈",
-    description:
-      "Business Intelligence dashboard for sales, profit, regional analysis and executive KPIs.",
-    tech: ["Power BI", "Excel", "DAX"],
-    github:
-      "https://github.com/AnandKumarAnamaina/Sales-Performance-Analysis-Dashboard-Power-BI-Project",
-  },
-  {
-    title: "HR Analytics Dashboard",
-    category: "Excel",
-    icon: "👨‍💼",
-    description:
-      "Excel dashboard analyzing employee performance, attrition, department statistics and workforce insights.",
-    tech: ["Excel", "Pivot Tables", "Charts"],
-    github:
-      "https://github.com/AnandKumarAnamaina/HR-Analytics-Dashboard",
-  },
-  {
-    title: "Student Performance Dashboard",
-    category: "Excel",
-    icon: "🎓",
-    description:
-      "Dashboard for monitoring attendance, academic performance and student progress.",
-    tech: ["Excel", "Dashboard", "KPIs"],
-    github:
-      "https://github.com/AnandKumarAnamaina/STUDENT-PERFORMANCE-DASHBOARD-PROJECT",
-  },
-  {
-    title: "Excel Sales Dashboard",
-    category: "Excel",
-    icon: "📑",
-    description:
-      "Professional sales dashboard using Pivot Tables, KPIs, slicers and charts.",
-    tech: ["Excel", "Pivot Tables", "Dashboard"],
-    github:
-      "https://github.com/AnandKumarAnamaina/Excel-sales-Dashboard",
-  },
-  {
-    title: "WordCount using Hadoop",
-    category: "Big Data",
-    icon: "💻",
-    description:
-      "Classic Hadoop MapReduce implementation demonstrating distributed word counting using Cloudera.",
-    tech: ["Java", "Hadoop", "MapReduce"],
-    github:
-      "https://github.com/AnandKumarAnamaina/WordCount-MapReduce-program-using-Hadoop-in-Cloudera",
-  },
-];
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import ProjectCard from "./ProjectCard";
+import projects from "./projectsData";
+
+const categories = ["All", "Power BI", "Excel", "Big Data"];
 
 export default function Projects() {
+  const [selected, setSelected] = useState("All");
+
+  const filteredProjects =
+    selected === "All"
+      ? projects
+      : projects.filter((project) => project.category === selected);
+
   return (
     <section
       id="projects"
-      className="py-24 bg-gradient-to-b from-slate-50 via-white to-slate-100"
+      className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 py-24"
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-blue-700 font-semibold">
-            Portfolio
+      {/* Background Blur */}
+      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-blue-500/10 blur-[120px]" />
+
+      <div className="absolute right-0 bottom-20 h-80 w-80 rounded-full bg-purple-500/10 blur-[140px]" />
+
+      <div className="relative mx-auto max-w-7xl px-6">
+        {/* ---------------- HEADER ---------------- */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-14 text-center"
+        >
+          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold text-blue-700">
+            Portfolio Showcase
           </span>
 
           <h2 className="mt-6 text-5xl font-bold text-slate-900">
             Featured Projects
           </h2>
 
-          <p className="mt-5 max-w-3xl mx-auto text-lg text-slate-600 leading-8">
-            A collection of Power BI, Excel and Big Data projects showcasing my
-            expertise in Business Intelligence, Dashboard Development and Data
-            Analytics.
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+            A curated collection of Power BI, Excel, and Big Data projects
+            demonstrating dashboard development, business intelligence,
+            data modeling, and analytics expertise.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+        {/* ---------------- FILTERS ---------------- */}
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mb-14 flex flex-wrap justify-center gap-4"
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelected(category)}
+              className={`rounded-full px-6 py-3 text-sm font-semibold transition duration-300 ${
+                selected === category
+                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                  : "bg-white text-slate-700 shadow hover:bg-slate-100"
+              }`}
             >
-              <div className="h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
-
-              <div className="p-8">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-3xl text-white shadow-lg">
-                  {project.icon}
-                </div>
-
-                <span className="mt-6 inline-block rounded-full bg-blue-50 px-4 py-1 text-sm font-semibold text-blue-700">
-                  {project.category}
-                </span>
-
-                <h3 className="mt-5 text-2xl font-bold text-slate-900">
-                  {project.title}
-                </h3>
-
-                <p className="mt-4 leading-7 text-slate-600">
-                  {project.description}
-                </p>
-
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {project.tech.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="mt-8 flex gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-xl bg-slate-900 px-5 py-3 font-medium text-white transition hover:bg-slate-800"
-                  >
-                    🐙 GitHub
-                  </a>
-
-                  <button
-                    disabled
-                    className="cursor-not-allowed rounded-xl border border-slate-300 px-5 py-3 text-slate-500"
-                  >
-                    🔗 Live Demo
-                  </button>
-                </div>
-              </div>
-            </div>
+              {category}
+            </button>
           ))}
-        </div>
+        </motion.div>
+
+        {/* ---------------- PROJECT GRID ---------------- */}
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selected}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.45 }}
+            className="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
+          >
+            {filteredProjects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+              />
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* ---------------- FOOTER TEXT ---------------- */}
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-20 text-center"
+        >
+          <p className="text-lg text-slate-600">
+            Every project reflects my passion for transforming
+            <span className="font-semibold text-blue-600">
+              {" "}raw data into meaningful business insights
+            </span>
+            through modern analytics and visualization.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

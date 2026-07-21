@@ -65,11 +65,11 @@ export default function TestimonialCarousel() {
 
       {/* Left Fade */}
 
-      <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-24 bg-gradient-to-r from-slate-100 via-slate-100/80 to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-32 bg-gradient-to-r from-slate-100 via-slate-100/80 to-transparent" />
 
       {/* Right Fade */}
 
-      <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-24 bg-gradient-to-l from-slate-100 via-slate-100/80 to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-32 bg-gradient-to-l from-slate-100 via-slate-100/80 to-transparent" />
 
       <div
         className="overflow-hidden"
@@ -102,7 +102,7 @@ export default function TestimonialCarousel() {
                 delay: (index % testimonials.length) * 0.08,
               }}
               whileHover={{
-                y: -10,
+                y: -12,
                 scale: 1.02,
                  rotate: -0.5,
               }}
@@ -117,11 +117,11 @@ export default function TestimonialCarousel() {
                 border
                 border-slate-200
                 bg-white
-                shadow-lg
+                shadow-[0_12px_40px_rgba(15,23,42,0.08)]
                 transition-all
                 duration-500
                 hover:border-blue-200
-                hover:shadow-[0_30px_60px_rgba(37,99,235,.18)]
+                hover:shadow-[0_35px_80px_rgba(59,130,246,0.20)]
               "
             >
 
@@ -142,7 +142,9 @@ export default function TestimonialCarousel() {
                   h-44
                   w-44
                   rounded-full
-                  bg-blue-200/30
+                  bg-gradient-to-br
+from-blue-300/30
+to-purple-300/30
                   blur-3xl
                   transition-all
                   duration-500
@@ -209,8 +211,8 @@ export default function TestimonialCarousel() {
       src={item.image}
       alt={item.name}
       className="
-        h-26
-        w-26
+        h-24
+        w-24
         rounded-full
         object-cover
         border-4
@@ -250,7 +252,10 @@ export default function TestimonialCarousel() {
       {item.role}
     </p>
 
-    <span className="mt-3 inline-flex items-center rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 px-4 py-1.5 text-xs font-semibold text-blue-700">
+    <span className="mt-3 inline-flex items-center rounded-full bg-gradient-to-r
+from-blue-100
+via-indigo-50
+to-purple-100 px-4 py-1.5 text-xs font-semibold text-blue-700">
       🎓 {item.course}
     </span>
 
