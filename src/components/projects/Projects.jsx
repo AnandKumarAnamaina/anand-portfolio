@@ -2,10 +2,12 @@ import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import projects from "./projectsData";
-import FeaturedProject from "./FeaturedProject";
 import FilterTabs from "./FilterTabs";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
+
+// ⭐ New Enterprise Case Study
+import SalesPerformanceCaseStudy from "../../projects/sales-performance/SalesPerformanceCaseStudy";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -17,13 +19,7 @@ const Projects = () => {
     []
   );
 
-  // Featured Project
-  const featuredProject = useMemo(
-    () => projects.find((project) => project.featured),
-    []
-  );
-
-  // Remaining Projects
+  // Exclude featured project from grid
   const filteredProjects = useMemo(() => {
     const remainingProjects = projects.filter(
       (project) => !project.featured
@@ -41,10 +37,13 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative py-24"
+      className="relative py-24 overflow-hidden"
     >
       <div className="mx-auto max-w-7xl px-6">
-        {/* Heading */}
+
+        {/* ========================= */}
+        {/* Section Heading */}
+        {/* ========================= */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,28 +61,55 @@ const Projects = () => {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-400">
-            A collection of business intelligence dashboards,
-            analytics solutions, and data-driven applications
-            built to solve real-world business problems.
+            Explore enterprise-grade Business Intelligence solutions,
+            Power BI dashboards, analytics case studies, and
+            real-world data-driven applications.
           </p>
         </motion.div>
 
-        {/* Filter */}
+        {/* ==================================================== */}
+        {/* Enterprise Featured Case Study */}
+        {/* ==================================================== */}
+
+        <div className="mb-24">
+          <SalesPerformanceCaseStudy />
+        </div>
+
+        {/* ========================= */}
+        {/* Other Projects Heading */}
+        {/* ========================= */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-10"
+        >
+          <h3 className="text-3xl font-bold text-white">
+            More Projects
+          </h3>
+
+          <p className="mt-3 text-slate-400">
+            Additional dashboards, analytics solutions, and business
+            intelligence projects.
+          </p>
+        </motion.div>
+
+        {/* ========================= */}
+        {/* Filters */}
+        {/* ========================= */}
+
         <FilterTabs
           categories={categories}
           selectedCategory={selectedCategory}
           onCategoryChange={setSelectedCategory}
         />
 
-        {/* Featured Project */}
-        {featuredProject && (
-          <FeaturedProject
-            project={featuredProject}
-            onOpen={setSelectedProject}
-          />
-        )}
-
+        {/* ========================= */}
         {/* Project Grid */}
+        {/* ========================= */}
+
         <motion.div
           layout
           className="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
@@ -99,7 +125,10 @@ const Projects = () => {
           </AnimatePresence>
         </motion.div>
 
+        {/* ========================= */}
         {/* Empty State */}
+        {/* ========================= */}
+
         {filteredProjects.length === 0 && (
           <div className="mt-12 text-center">
             <p className="text-lg text-slate-400">
@@ -109,7 +138,10 @@ const Projects = () => {
         )}
       </div>
 
+      {/* ========================= */}
       {/* Project Modal */}
+      {/* ========================= */}
+
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
