@@ -70,7 +70,7 @@ export default function Contact() {
 
             <div className="mt-10">
               <a
-                href="https://github.com/AnandKumarAnamaina"
+                href="https://GitHub.com/AnandKumarAnamaina"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block rounded-xl bg-white text-slate-900 px-6 py-3 font-semibold hover:bg-slate-200 transition"

@@ -1,277 +1,262 @@
+// ==========================================================
+// Dashboard Images
+// ==========================================================
+
+import salesDashboard from "../../projects/excel-sales-dashboard.png";
+import foodDeliveryDashboard from "../../projects/food-delivery-dashboard.png";
+import hrDashboard from "../../projects/hr-dashboard.png";
+import studentDashboard from "../../projects/student-dashboard.png";
+
+// ==========================================================
+// Projects Data
+// ==========================================================
+
 const projects = [
   {
     id: 1,
-
     featured: true,
-
     category: "Power BI",
+    title: "Excel Sales Analytics Dashboard",
+    subtitle: "Executive Business Intelligence Dashboard",
+    image: salesDashboard,
 
-    title: "Food Delivery Analytics Dashboard",
+    github: "https://github.com/yourusername/excel-sales-dashboard",
+    liveDemo: "",
 
-    subtitle: "Business Intelligence Dashboard",
+    duration: "3 Weeks",
+    role: "Power BI Developer",
+    dataset: "120K+ Sales Records",
 
-    image: "/projects/food-delivery-dashboard.png",
+    businessChallenge:
+      "Business managers relied on multiple Excel reports to monitor sales, profit, customer performance, and regional growth. Report preparation was manual, time-consuming, and lacked real-time insights.",
 
-    businessProblem:
-      "Restaurant owners lacked a centralized dashboard to monitor orders, customer behavior, delivery efficiency, and revenue performance.",
+    objective:
+      "Design a centralized executive dashboard that provides complete visibility into sales performance, profitability, customer trends, and regional analysis.",
 
     solution:
-      "Designed an interactive Power BI dashboard with KPIs, drill-through pages, slicers, Power Query transformations, and DAX measures for real-time business insights.",
+      "Developed an interactive Power BI solution using Power Query, Star Schema Data Modeling, DAX Measures, KPI Cards, Drill-through Reports, Dynamic Filters, and Executive Dashboards.",
+
+    businessImpact:
+      "Reduced manual reporting effort, improved executive decision-making, and enabled faster business performance tracking.",
+
+    insights: [
+      "West region generated the highest revenue.",
+      "Top 20% of customers contributed more than half of total sales.",
+      "Technology category achieved the highest profit margin.",
+      "Quarter 4 recorded the highest overall sales.",
+    ],
 
     features: [
       "Executive KPI Cards",
-      "Delivery Performance",
-      "Revenue Analysis",
-      "Customer Insights",
-      "Interactive Filters",
-      "Drill Through Reports",
+      "Dynamic Slicers",
+      "Drill Through",
+      "Bookmarks",
+      "Tooltip Pages",
+      "Dynamic Titles",
+      "Responsive Dashboard",
     ],
 
-    tech: [
+    technologies: [
       "Power BI",
       "Power Query",
       "DAX",
       "Excel",
+      "Data Modeling",
+      "Business Intelligence",
     ],
 
     metrics: {
-      pages: 5,
-      dax: 18,
+      dashboards: 1,
+      pages: 6,
       visuals: 24,
-      datasource: 2,
+      daxMeasures: 18,
+      dataSources: 2,
     },
 
-    github:
-      "https://github.com/AnandKumarAnamaina/FOOD-DELIVERY-ANALYTICS-DASHBOARD-Power-BI-Project",
-
-    demo: "",
+    screenshots: [salesDashboard],
   },
 
   {
     id: 2,
-
-    featured: true,
-
+    featured: false,
     category: "Power BI",
+    title: "Food Delivery Analytics Dashboard",
+    subtitle: "Restaurant & Delivery Intelligence",
+    image: foodDeliveryDashboard,
 
-    title: "Sales Performance Dashboard",
+    github: "",
+    liveDemo: "",
 
-    subtitle: "Executive Sales Analytics",
+    duration: "2 Weeks",
+    role: "Data Analyst",
+    dataset: "95K+ Orders",
 
-    image: "/projects/sales-dashboard.png",
+    businessChallenge:
+      "Restaurant owners struggled to monitor daily orders, delivery performance, customer behavior, and revenue using multiple spreadsheets.",
 
-    businessProblem:
-      "Business managers required a dashboard to monitor revenue, profit, customer segments, and regional sales performance.",
+    objective:
+      "Create a dashboard that tracks order trends, delivery efficiency, customer ratings, and restaurant performance in one place.",
 
     solution:
-      "Developed an executive Power BI dashboard providing dynamic KPI tracking, regional analysis, trend forecasting, and drill-through reporting.",
+      "Built a Power BI dashboard integrating sales, delivery, customer, and restaurant datasets with interactive filtering and KPI reporting.",
 
-    features: [
-      "Sales KPIs",
-      "Profit Analysis",
-      "Regional Dashboard",
-      "Trend Analysis",
-      "Executive Summary",
+    businessImpact:
+      "Improved operational visibility and enabled data-driven business decisions for restaurant management.",
+
+    insights: [
+      "Dinner hours generated the highest order volume.",
+      "Top-rated restaurants also had the fastest delivery times.",
+      "Weekends accounted for the highest revenue.",
+      "Online payment was the most preferred payment method.",
     ],
 
-    tech: [
+    features: [
+      "Restaurant Performance Dashboard",
+      "Order Analysis",
+      "Delivery Time Analysis",
+      "Customer Ratings",
+      "Revenue Dashboard",
+      "Interactive Filters",
+    ],
+
+    technologies: [
       "Power BI",
+      "Power Query",
       "Excel",
       "DAX",
     ],
 
     metrics: {
-      pages: 4,
-      dax: 15,
+      dashboards: 1,
+      pages: 5,
       visuals: 20,
-      datasource: 1,
+      daxMeasures: 14,
+      dataSources: 2,
     },
 
-    github:
-      "https://github.com/AnandKumarAnamaina/Sales-Performance-Analysis-Dashboard-Power-BI-Project",
-
-    demo: "",
+    screenshots: [foodDeliveryDashboard],
   },
 
   {
     id: 3,
-
     featured: false,
-
-    category: "Excel",
-
+    category: "Power BI",
     title: "HR Analytics Dashboard",
+    subtitle: "Employee Workforce Analytics",
+    image: hrDashboard,
 
-    subtitle: "Employee Performance Dashboard",
+    github: "",
+    liveDemo: "",
 
-    image: "/projects/hr-dashboard.png",
+    duration: "2 Weeks",
+    role: "Power BI Developer",
+    dataset: "35K+ Employees",
 
-    businessProblem:
-      "HR teams needed insights into employee performance, attrition, departmental growth, and workforce distribution.",
+    businessChallenge:
+      "HR teams lacked a centralized reporting solution for monitoring employee attrition, workforce demographics, departmental performance, and hiring trends.",
+
+    objective:
+      "Develop a comprehensive HR analytics dashboard to support employee retention strategies and workforce planning.",
 
     solution:
-      "Created an interactive Excel dashboard using Pivot Tables, Pivot Charts, KPIs, and slicers for HR reporting.",
+      "Created an interactive dashboard using DAX calculations, employee segmentation, department analysis, and dynamic KPI reporting.",
 
-    features: [
-      "Employee KPIs",
-      "Attrition Analysis",
-      "Department Insights",
-      "Interactive Charts",
+    businessImpact:
+      "Improved HR reporting efficiency and supported data-driven workforce planning.",
+
+    insights: [
+      "Highest attrition occurred within the first two years.",
+      "Research department maintained the highest employee retention.",
+      "Employees under 30 showed the highest turnover.",
+      "Overtime employees had higher attrition rates.",
     ],
 
-    tech: [
+    features: [
+      "Attrition Dashboard",
+      "Employee KPIs",
+      "Department Analysis",
+      "Gender Distribution",
+      "Experience Analysis",
+      "Interactive Filters",
+    ],
+
+    technologies: [
+      "Power BI",
+      "DAX",
       "Excel",
-      "Pivot Tables",
-      "Charts",
+      "Power Query",
     ],
 
     metrics: {
-      pages: 2,
-      dax: 0,
-      visuals: 12,
-      datasource: 1,
+      dashboards: 1,
+      pages: 5,
+      visuals: 18,
+      daxMeasures: 12,
+      dataSources: 1,
     },
 
-    github:
-      "https://github.com/AnandKumarAnamaina/HR-Analytics-Dashboard",
-
-    demo: "",
+    screenshots: [hrDashboard],
   },
 
   {
     id: 4,
-
     featured: false,
+    category: "Power BI",
+    title: "Student Performance Analytics Dashboard",
+    subtitle: "Academic Performance Intelligence",
+    image: studentDashboard,
 
-    category: "Excel",
+    github: "",
+    liveDemo: "",
 
-    title: "Student Performance Dashboard",
+    duration: "2 Weeks",
+    role: "Data Analyst",
+    dataset: "15K+ Student Records",
 
-    subtitle: "Academic Analytics",
+    businessChallenge:
+      "Educational institutions required an interactive reporting solution to monitor attendance, academic performance, placements, and department-wise statistics.",
 
-    image: "/projects/student-dashboard.png",
-
-    businessProblem:
-      "Educational institutions required a dashboard to monitor attendance, academic performance, and student progress.",
+    objective:
+      "Provide academic administrators with real-time student performance insights using interactive Power BI dashboards.",
 
     solution:
-      "Designed an Excel dashboard with KPIs, attendance tracking, performance analysis, and visual reporting.",
+      "Designed dashboards integrating attendance, academic results, placement statistics, and departmental performance into a unified reporting solution.",
+
+    businessImpact:
+      "Reduced manual academic reporting and improved institutional decision-making.",
+
+    insights: [
+      "Attendance strongly influenced final academic performance.",
+      "Computer Science students achieved the highest placement percentage.",
+      "Semester 2 recorded the highest failure rate.",
+      "Overall placement percentage improved year over year.",
+    ],
 
     features: [
+      "Academic KPI Dashboard",
+      "Placement Analysis",
       "Attendance Dashboard",
-      "Performance KPIs",
-      "Interactive Charts",
-      "Student Analysis",
+      "Department Comparison",
+      "Performance Trends",
+      "Interactive Filtering",
     ],
 
-    tech: [
+    technologies: [
+      "Power BI",
       "Excel",
-      "Dashboard",
-      "KPIs",
+      "Power Query",
+      "DAX",
     ],
 
     metrics: {
-      pages: 2,
-      dax: 0,
-      visuals: 10,
-      datasource: 1,
+      dashboards: 1,
+      pages: 5,
+      visuals: 21,
+      daxMeasures: 11,
+      dataSources: 1,
     },
 
-    github:
-      "https://github.com/AnandKumarAnamaina/STUDENT-PERFORMANCE-DASHBOARD-PROJECT",
-
-    demo: "",
-  },
-
-  {
-    id: 5,
-
-    featured: false,
-
-    category: "Excel",
-
-    title: "Excel Sales Dashboard",
-
-    subtitle: "Business Reporting",
-
-    image: "/projects/excel-sales-dashboard.png",
-
-    businessProblem:
-      "Sales teams required a dashboard to monitor KPIs and monthly business performance.",
-
-    solution:
-      "Developed a professional Excel dashboard using Pivot Tables, Charts, KPIs, and slicers.",
-
-    features: [
-      "Sales KPIs",
-      "Pivot Dashboard",
-      "Business Charts",
-      "Interactive Filters",
-    ],
-
-    tech: [
-      "Excel",
-      "Pivot Tables",
-      "Dashboard",
-    ],
-
-    metrics: {
-      pages: 2,
-      dax: 0,
-      visuals: 11,
-      datasource: 1,
-    },
-
-    github:
-      "https://github.com/AnandKumarAnamaina/Excel-sales-Dashboard",
-
-    demo: "",
-  },
-
-  {
-    id: 6,
-
-    featured: false,
-
-    category: "Big Data",
-
-    title: "WordCount using Hadoop",
-
-    subtitle: "MapReduce Project",
-
-    image: "/projects/wordcount-dashboard.png",
-
-    businessProblem:
-      "Process massive text files efficiently using distributed computing instead of traditional sequential processing.",
-
-    solution:
-      "Implemented the classic Hadoop MapReduce WordCount application in Cloudera using Java and HDFS.",
-
-    features: [
-      "HDFS",
-      "MapReduce",
-      "Distributed Processing",
-      "Java",
-    ],
-
-    tech: [
-      "Java",
-      "Hadoop",
-      "MapReduce",
-      "Cloudera",
-    ],
-
-    metrics: {
-      pages: 1,
-      dax: 0,
-      visuals: 0,
-      datasource: 1,
-    },
-
-    github:
-      "https://github.com/AnandKumarAnamaina/WordCount-MapReduce-program-using-Hadoop-in-Cloudera",
-
-    demo: "",
+    screenshots: [studentDashboard],
   },
 ];
 

@@ -1,116 +1,121 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ProjectCard from "./ProjectCard";
+
 import projects from "./projectsData";
+import FeaturedProject from "./FeaturedProject";
+import FilterTabs from "./FilterTabs";
+import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectModal";
 
-const categories = ["All", "Power BI", "Excel", "Big Data"];
+const Projects = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedProject, setSelectedProject] = useState(null);
 
-export default function Projects() {
-  const [selected, setSelected] = useState("All");
+  // Categories
+  const categories = useMemo(
+    () => ["All", ...new Set(projects.map((project) => project.category))],
+    []
+  );
 
-  const filteredProjects =
-    selected === "All"
-      ? projects
-      : projects.filter((project) => project.category === selected);
+  // Featured Project
+  const featuredProject = useMemo(
+    () => projects.find((project) => project.featured),
+    []
+  );
+
+  // Remaining Projects
+  const filteredProjects = useMemo(() => {
+    const remainingProjects = projects.filter(
+      (project) => !project.featured
+    );
+
+    if (selectedCategory === "All") {
+      return remainingProjects;
+    }
+
+    return remainingProjects.filter(
+      (project) => project.category === selectedCategory
+    );
+  }, [selectedCategory]);
 
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 py-24"
+      className="relative py-24"
     >
-      {/* Background Blur */}
-      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-blue-500/10 blur-[120px]" />
-
-      <div className="absolute right-0 bottom-20 h-80 w-80 rounded-full bg-purple-500/10 blur-[140px]" />
-
-      <div className="relative mx-auto max-w-7xl px-6">
-        {/* ---------------- HEADER ---------------- */}
-
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-14 text-center"
+          transition={{ duration: 0.6 }}
+          className="mb-16 text-center"
         >
-          <span className="inline-flex rounded-full bg-blue-100 px-5 py-2 text-sm font-semibold text-blue-700">
-            Portfolio Showcase
+          <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-400">
+            Portfolio
           </span>
 
-          <h2 className="mt-6 text-5xl font-bold text-slate-900">
-            Featured Projects
+          <h2 className="mt-6 text-5xl font-bold text-white">
+            Projects &
+            <span className="text-blue-500"> Case Studies</span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
-            A curated collection of Power BI, Excel, and Big Data projects
-            demonstrating dashboard development, business intelligence,
-            data modeling, and analytics expertise.
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-400">
+            A collection of business intelligence dashboards,
+            analytics solutions, and data-driven applications
+            built to solve real-world business problems.
           </p>
         </motion.div>
 
-        {/* ---------------- FILTERS ---------------- */}
+        {/* Filter */}
+        <FilterTabs
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+        />
 
+        {/* Featured Project */}
+        {featuredProject && (
+          <FeaturedProject
+            project={featuredProject}
+            onOpen={setSelectedProject}
+          />
+        )}
+
+        {/* Project Grid */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mb-14 flex flex-wrap justify-center gap-4"
+          layout
+          className="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
         >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelected(category)}
-              className={`rounded-full px-6 py-3 text-sm font-semibold transition duration-300 ${
-                selected === category
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
-                  : "bg-white text-slate-700 shadow hover:bg-slate-100"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* ---------------- PROJECT GRID ---------------- */}
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selected}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 30 }}
-            transition={{ duration: 0.45 }}
-            className="grid gap-8 md:grid-cols-2 xl:grid-cols-3"
-          >
-            {filteredProjects.map((project, index) => (
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project) => (
               <ProjectCard
                 key={project.id}
                 project={project}
-                index={index}
+                onOpen={setSelectedProject}
               />
             ))}
-          </motion.div>
-        </AnimatePresence>
-
-        {/* ---------------- FOOTER TEXT ---------------- */}
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-20 text-center"
-        >
-          <p className="text-lg text-slate-600">
-            Every project reflects my passion for transforming
-            <span className="font-semibold text-blue-600">
-              {" "}raw data into meaningful business insights
-            </span>
-            through modern analytics and visualization.
-          </p>
+          </AnimatePresence>
         </motion.div>
+
+        {/* Empty State */}
+        {filteredProjects.length === 0 && (
+          <div className="mt-12 text-center">
+            <p className="text-lg text-slate-400">
+              No projects found for this category.
+            </p>
+          </div>
+        )}
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
-}
+};
+
+export default Projects;

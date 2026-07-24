@@ -50,7 +50,7 @@ export default function Footer() {
             <div className="space-y-4">
 
               <a
-                href="https://github.com/AnandKumarAnamaina"
+                href="https://GitHub.com/AnandKumarAnamaina"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-white transition"
